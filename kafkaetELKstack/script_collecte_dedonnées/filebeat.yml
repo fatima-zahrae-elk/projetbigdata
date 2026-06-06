@@ -1,0 +1,17 @@
+filebeat.inputs:
+  - type: filestream
+    id: my-filestream-id
+    enabled: true
+    paths:
+      - /var/log/syslog
+      - /var/log/auth.log
+    fields:
+      vm_name: "vm-01"  # Nom distinct pour chaque VM (à adapter)
+    fields_under_root: true  # Place les champs au niveau racine pour plus de lisibilité
+
+# Configuration de sortie vers Kafka (serveur central Kafka)
+output.kafka:
+  hosts: ["192.168.2.5:9092"]  # IP du serveur Kafka central
+  topic: "vm_logs"
+  codec.json:
+    pretty: false

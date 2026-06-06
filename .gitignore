@@ -1,0 +1,32 @@
+# Données
+data_base/
+*.csv
+*.log
+
+# Rapport
+RapportDuProjet.pdf
+*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
