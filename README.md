@@ -4,22 +4,13 @@ Projet de traitement de logs en temps réel basé sur Apache Kafka, Apache Spark
 
 ## Architecture
 
-```
-VMs Linux
-   │
-   ▼
-Filebeat  ──────────►  Kafka (Topic: vm_logs)
-                              │
-                    ┌─────────┴─────────┐
-                    ▼                   ▼
-              Spark Streaming      Logstash
-              (Classification)         │
-                    │                  ▼
-                    └──────►  Elasticsearch
-                                       │
-                                       ▼
-                                   Kibana
-```
+### Kafka + Spark Structured Streaming
+
+![Kafka Spark Architecture](kafka_spark.png)
+
+### Pipeline complet : Beats → Kafka → Logstash → ELK
+
+![ELK Architecture](elk_architecture.png)
 
 ## Composants
 
